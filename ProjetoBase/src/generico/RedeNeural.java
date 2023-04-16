@@ -6,7 +6,7 @@ import java.util.List;
 public class RedeNeural {
     private final List<CamadaNeural> camadas;
     private final CamadaNeural camadaSensorial;
-    private CamadaNeural ultimaCamadaDiscreta;
+    private CamadaNeural ultimaCamada;
 
     public RedeNeural(final int qtdNeuroniosEntrada) {
         this.camadas = new LinkedList<>();
@@ -17,22 +17,24 @@ public class RedeNeural {
         }
 
         this.camadaSensorial = new CamadaNeural(neuroniosSensoriais);
-        this.ultimaCamadaDiscreta = null;
+        this.ultimaCamada = camadaSensorial;
         this.camadas.add(camadaSensorial);
     }
 
     public void addCamada(final CamadaNeural camada) {
+        this.ultimaCamada.ligarTotalmenteCom(camada);
+
         this.camadas.add(camada);
-        this.ultimaCamadaDiscreta = camada;
+        this.ultimaCamada = camada;
     }
 
     public List<Double> computarEntrada(final List<Double> entrada) {
-        if(ultimaCamadaDiscreta == null)
+        if(ultimaCamada == camadaSensorial)
             throw new RuntimeException("Sem camadas discretas");
 
         this.camadaSensorial.addEntrada(entrada);
         this.camadas.forEach(CamadaNeural::ativarNeuronios);
 
-        return ultimaCamadaDiscreta.getOutput();
+        return ultimaCamada.getOutput();
     }
 }

@@ -1,6 +1,7 @@
 package generico;
 
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class CamadaNeural {
@@ -12,6 +13,18 @@ public class CamadaNeural {
 
     public void ativarNeuronios() {
         neuronios.forEach(Neuronio::ativarNeuronio);
+    }
+
+    public void ligarTotalmenteCom(final CamadaNeural seguinte) {
+        final var gerador = new Random();
+
+        neuronios.forEach(atual ->
+                seguinte.neuronios.forEach(viz -> atual.addVizinhoSeguinte(viz, pesoValidoAleatorio(gerador)))
+        );
+    }
+
+    private double pesoValidoAleatorio(final Random r) {
+        return (r.nextDouble() + 0.1) % 1;
     }
 
     public void addEntrada(final List<Double> entrada) {

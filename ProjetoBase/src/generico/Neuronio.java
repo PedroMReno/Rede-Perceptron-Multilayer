@@ -13,6 +13,7 @@ public abstract class Neuronio {
         this.ultimoValorCalculado = null;
         this.inputBuffer = new LinkedList<>();
         this.sinapsesSeguintes = new LinkedList<>();
+        this.sinapsesAnteriores = new LinkedList<>();
     }
 
     public double getUltimoValorCalculado() {
