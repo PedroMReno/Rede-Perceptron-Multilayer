@@ -1,7 +1,5 @@
 package generico;
 
-import java.util.List;
-
 public class NeuronioSensorial extends Neuronio {
     @Override
     protected double computarEntradas() {

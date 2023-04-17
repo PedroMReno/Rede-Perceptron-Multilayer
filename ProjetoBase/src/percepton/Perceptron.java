@@ -16,9 +16,9 @@ public class Perceptron extends Neuronio {
 
     @Override
     protected double efetuarCalculo(double entradaComputada) {
-        if (entradaComputada <= 0)
-            return 0;
+        if (entradaComputada >= 0)
+            return 1;
 
-        return 1;
+        return 0;
     }
 }

@@ -10,9 +10,9 @@ public class Main {
         final var camada = new CamadaNeural(List.of(new Perceptron()));
         rede.addCamada(camada);
 
-        System.out.println(rede.computarEntrada(List.of(0.0, 0.0)));
-        System.out.println(rede.computarEntrada(List.of(1.0, 0.0)));
-        System.out.println(rede.computarEntrada(List.of(0.0, 1.0)));
+        System.out.println(rede.computarEntrada(List.of(-1.0, -1.0)));
+        System.out.println(rede.computarEntrada(List.of(1.0, -1.0)));
+        System.out.println(rede.computarEntrada(List.of(-1.0, 1.0)));
         System.out.println(rede.computarEntrada(List.of(1.0, 1.0)));
     }
 }

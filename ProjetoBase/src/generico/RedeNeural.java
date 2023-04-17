@@ -8,11 +8,11 @@ public class RedeNeural {
     private final CamadaNeural camadaSensorial;
     private CamadaNeural ultimaCamada;
 
-    public RedeNeural(final int qtdNeuroniosEntrada) {
+    public RedeNeural(final int qtdNeuroniosSensorial) {
         this.camadas = new LinkedList<>();
 
         final List<Neuronio> neuroniosSensoriais = new LinkedList<>();
-        for(int i = 0; i < qtdNeuroniosEntrada; i++) {
+        for(int i = 0; i < qtdNeuroniosSensorial; i++) {
             neuroniosSensoriais.add(new NeuronioSensorial());
         }
 

@@ -25,7 +25,7 @@ public abstract class Neuronio {
         vizinho.addVizinhoAnterior(this, peso);
     }
 
-    public void addVizinhoAnterior(final Neuronio vizinho, final double peso) {
+    private void addVizinhoAnterior(final Neuronio vizinho, final double peso) {
         this.sinapsesAnteriores.add(new Sinapse(vizinho, peso));
     }
 
