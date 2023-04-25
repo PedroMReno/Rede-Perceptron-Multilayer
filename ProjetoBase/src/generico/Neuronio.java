@@ -7,10 +7,14 @@ public abstract class Neuronio {
     protected List<Sinapse> sinapsesSeguintes;
     protected List<Sinapse> sinapsesAnteriores;
     protected Double ultimoValorCalculado;
+    protected Double ultimoInputFeedforwarding;
+    protected Double ultimoInputRetroPropagation;
     protected List<Input> inputBuffer;
 
     public Neuronio() {
         this.ultimoValorCalculado = null;
+        this.ultimoInputFeedforwarding = null;
+        this.ultimoInputRetroPropagation = null;
         this.inputBuffer = new LinkedList<>();
         this.sinapsesSeguintes = new LinkedList<>();
         this.sinapsesAnteriores = new LinkedList<>();
@@ -35,22 +39,38 @@ public abstract class Neuronio {
 
     protected abstract double computarEntradas();
 
-    protected abstract double efetuarCalculo(final double entradaComputada);
+    protected abstract double funcaoDeAtivacao(final double entradaComputada);
+    protected abstract double derivadaDaFuncaoDeAtivacao(final double entradaComputada);
 
-    protected void propagarCalculo(final double resultado) {
+    public void feedforward() {
+        this.ultimoInputFeedforwarding = computarEntradas();
+        final var resultado = funcaoDeAtivacao(this.ultimoInputFeedforwarding);
+        this.ultimoValorCalculado = resultado;
+
         for(Sinapse s : sinapsesSeguintes) {
             final var input = s.gerarInput(resultado);
             s.getNeuronio().addInput(input);
         }
+
+        this.inputBuffer.clear();
     }
 
-    public double ativarNeuronio() {
-        final var resultado = efetuarCalculo(computarEntradas());
-        this.ultimoValorCalculado = resultado;
+    public void backPropagation(final double taxaDeAprendizado) {
+        this.ultimoInputRetroPropagation = computarEntradas();
+        final var termoDeCorrecao = this.ultimoInputRetroPropagation *
+                derivadaDaFuncaoDeAtivacao(this.ultimoInputFeedforwarding);
 
-        propagarCalculo(resultado);
+        for(Sinapse s : sinapsesAnteriores) {
+            final var input = s.gerarInput(termoDeCorrecao);
+            s.getNeuronio().addInput(input);
+
+            s.armazenarCorrecao(taxaDeAprendizado * termoDeCorrecao * s.getNeuronio().ultimoValorCalculado);
+        }
+
         this.inputBuffer.clear();
+    }
 
-        return resultado;
+    public void ajustarPeso() {
+
     }
 }

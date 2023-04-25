@@ -11,7 +11,12 @@ public class NeuronioSensorial extends Neuronio {
     }
 
     @Override
-    protected double efetuarCalculo(double entradaComputada) {
+    protected double funcaoDeAtivacao(double entradaComputada) {
+        return entradaComputada;
+    }
+
+    @Override
+    protected double derivadaDaFuncaoDeAtivacao(double entradaComputada) {
         return entradaComputada;
     }
 }

@@ -15,10 +15,12 @@ public class Perceptron extends Neuronio {
     }
 
     @Override
-    protected double efetuarCalculo(double entradaComputada) {
-        if (entradaComputada >= 0)
-            return 1;
+    protected double funcaoDeAtivacao(double entradaComputada) {
+        return Math.tanh(entradaComputada);
+    }
 
-        return 0;
+    @Override
+    protected double derivadaDaFuncaoDeAtivacao(double entradaComputada) {
+        return 1 / (1 - Math.pow(entradaComputada, 2));
     }
 }

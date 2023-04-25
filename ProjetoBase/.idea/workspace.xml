@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Fix project">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Fix gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/CamadaNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/CamadaNeural.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/Neuronio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/Neuronio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/NeuronioSensorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/NeuronioSensorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/percepton/Perceptron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/percepton/Perceptron.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +26,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Pedro\Desktop\Workspace\IA\RedesNeurais\ProjetoBase\src" />
@@ -62,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681743519939</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix gitignore">
+      <created>1681743660872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681743660872</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,6 +91,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix project" />
+    <MESSAGE value="Fix gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix gitignore" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

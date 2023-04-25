@@ -2,19 +2,26 @@ package generico;
 
 public class Sinapse {
     private final Neuronio neuronio;
-    private final double peso;
+    private double peso;
+    private double deltaPeso;
 
     public Sinapse(final Neuronio neuronio, final double peso) {
         this.neuronio = neuronio;
         this.peso = peso;
+        this.deltaPeso = 0;
     }
 
     public Neuronio getNeuronio() {
         return neuronio;
     }
 
-    public double getPeso() {
-        return peso;
+    public void armazenarCorrecao(final double deltaPeso) {
+        this.deltaPeso = deltaPeso;
+    }
+
+    public void aplicarCorrecao() {
+        this.peso += this.deltaPeso;
+        this.deltaPeso = 0;
     }
 
     public Input gerarInput(final double valor) {

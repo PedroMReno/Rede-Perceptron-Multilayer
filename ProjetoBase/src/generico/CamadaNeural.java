@@ -12,7 +12,7 @@ public class CamadaNeural {
     }
 
     public void ativarNeuronios() {
-        neuronios.forEach(Neuronio::ativarNeuronio);
+        neuronios.forEach(Neuronio::feedforward);
     }
 
     public void ligarTotalmenteCom(final CamadaNeural seguinte) {
