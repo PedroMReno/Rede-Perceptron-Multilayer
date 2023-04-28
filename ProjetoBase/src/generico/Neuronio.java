@@ -1,5 +1,7 @@
 package generico;
 
+import generico.dto.Input;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -64,13 +66,14 @@ public abstract class Neuronio {
             final var input = s.gerarInput(termoDeCorrecao);
             s.getNeuronio().addInput(input);
 
-            s.armazenarCorrecao(taxaDeAprendizado * termoDeCorrecao * s.getNeuronio().ultimoValorCalculado);
+            final var deltaPeso = taxaDeAprendizado * termoDeCorrecao * s.getUltimoInputPassado().getValorPuro();
+            s.armazenarCorrecao(deltaPeso);
         }
 
         this.inputBuffer.clear();
     }
 
-    public void ajustarPeso() {
-
+    public void aplicarDeltaPesos() {
+        this.sinapsesAnteriores.forEach(Sinapse::aplicarCorrecao);
     }
 }

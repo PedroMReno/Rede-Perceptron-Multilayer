@@ -1,5 +1,7 @@
 package generico;
 
+import generico.dto.Input;
+
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -11,7 +13,7 @@ public class CamadaNeural {
         this.neuronios = neuronios;
     }
 
-    public void ativarNeuronios() {
+    public void feedForwarding() {
         neuronios.forEach(Neuronio::feedforward);
     }
 
@@ -39,5 +41,13 @@ public class CamadaNeural {
 
     public List<Double> getOutput() {
         return neuronios.stream().map(Neuronio::getUltimoValorCalculado).collect(Collectors.toList());
+    }
+
+    public void backPropagation(final double taxaDeAprendizado) {
+        this.neuronios.forEach(neu -> neu.backPropagation(taxaDeAprendizado));
+    }
+
+    public void aplicarDeltaPesos() {
+        this.neuronios.forEach(Neuronio::aplicarDeltaPesos);
     }
 }

@@ -1,6 +1,6 @@
 package percepton;
 
-import generico.Input;
+import generico.dto.Input;
 import generico.Neuronio;
 
 public class Perceptron extends Neuronio {
