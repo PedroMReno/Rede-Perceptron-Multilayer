@@ -1,6 +1,6 @@
 package generico.dto;
 
-import generico.Neuronio;
+import generico.neuronios.Neuronio;
 
 public class Input {
     private final Neuronio gerador;

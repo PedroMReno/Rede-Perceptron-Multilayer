@@ -1,6 +1,7 @@
 package generico;
 
 import generico.dto.Input;
+import generico.neuronios.Neuronio;
 
 public class Sinapse {
     private final Neuronio neuronio;

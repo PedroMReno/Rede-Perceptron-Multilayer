@@ -1,6 +1,8 @@
 package generico;
 
 import generico.dto.Input;
+import generico.neuronios.Bias;
+import generico.neuronios.Neuronio;
 
 import java.util.List;
 import java.util.Random;
@@ -8,12 +10,29 @@ import java.util.stream.Collectors;
 
 public class CamadaNeural {
     private final List<Neuronio> neuronios;
+    private final Neuronio bias;
 
     public CamadaNeural(final List<Neuronio> neuronios) {
+        this(neuronios, false);
+    }
+
+    public CamadaNeural(final List<Neuronio> neuronios, final boolean comBias) {
         this.neuronios = neuronios;
+
+        if (comBias) {
+            this.bias = new Bias();
+
+            final var gerador = new Random();
+            this.neuronios.forEach(neuronio -> bias.addVizinhoSeguinte(neuronio, pesoValidoAleatorio(gerador)));
+        } else {
+            this.bias = null;
+        }
     }
 
     public void feedForwarding() {
+        if (bias != null)
+            bias.feedforward();
+
         neuronios.forEach(Neuronio::feedforward);
     }
 
@@ -26,7 +45,8 @@ public class CamadaNeural {
     }
 
     private double pesoValidoAleatorio(final Random r) {
-        return (r.nextDouble() + 0.1) % 1;
+        final var v = (r.nextDouble() + 0.1) % 1;
+        return v * (r.nextBoolean() ? 1 : -1);
     }
 
     public void addEntrada(final List<Double> entrada) {

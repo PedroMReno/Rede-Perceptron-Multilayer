@@ -1,6 +1,8 @@
 package generico;
 
 import generico.dto.InputTreinamento;
+import generico.neuronios.Neuronio;
+import generico.neuronios.NeuronioSensorial;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

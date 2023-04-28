@@ -1,4 +1,6 @@
-package generico;
+package generico.neuronios;
+
+import generico.neuronios.Neuronio;
 
 public class NeuronioSensorial extends Neuronio {
     @Override

@@ -1,7 +1,7 @@
 package percepton;
 
 import generico.dto.Input;
-import generico.Neuronio;
+import generico.neuronios.Neuronio;
 
 public class Perceptron extends Neuronio {
     @Override

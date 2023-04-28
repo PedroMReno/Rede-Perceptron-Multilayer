@@ -1,5 +1,6 @@
-package generico;
+package generico.neuronios;
 
+import generico.Sinapse;
 import generico.dto.Input;
 
 import java.util.LinkedList;

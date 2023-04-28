@@ -9,10 +9,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         final var rede = new RedeNeural(2);
-        rede.addCamada(CamadaNeuralUtils.camadaDePerceptrons(16));
-        rede.addCamada(CamadaNeuralUtils.camadaDePerceptrons(1)); // saida
+        rede.addCamada(CamadaNeuralUtils.camadaDePerceptrons(8, true));
+        rede.addCamada(CamadaNeuralUtils.camadaDePerceptrons(1, true)); // saida
 
-        rede.fit(geraDados(), 0.005, 100000);
+        rede.fit(geraDados(), 0.001, 10000);
 
         System.out.println(rede.predict(List.of(-1.0, -1.0)));
         System.out.println(rede.predict(List.of(1.0, -1.0)));
