@@ -28,12 +28,13 @@ public abstract class Neuronio {
     }
 
     public void addVizinhoSeguinte(final Neuronio vizinho, final double peso) {
-        this.sinapsesSeguintes.add(new Sinapse(vizinho, peso));
-        vizinho.addVizinhoAnterior(this, peso);
+        final var sinapse = new Sinapse(this, vizinho, peso);
+        this.sinapsesSeguintes.add(sinapse);
+        vizinho.addVizinhoAnterior(sinapse);
     }
 
-    private void addVizinhoAnterior(final Neuronio vizinho, final double peso) {
-        this.sinapsesAnteriores.add(new Sinapse(vizinho, peso));
+    private void addVizinhoAnterior(final Sinapse sinapse) {
+        this.sinapsesAnteriores.add(sinapse);
     }
 
     public void addInput(final Input input) {
@@ -52,7 +53,7 @@ public abstract class Neuronio {
 
         for(Sinapse s : sinapsesSeguintes) {
             final var input = s.gerarInput(resultado);
-            s.getNeuronio().addInput(input);
+            s.getFim().addInput(input);
         }
 
         this.inputBuffer.clear();
@@ -65,7 +66,7 @@ public abstract class Neuronio {
 
         for(Sinapse s : sinapsesAnteriores) {
             final var input = s.gerarInput(termoDeCorrecao);
-            s.getNeuronio().addInput(input);
+            s.getIni().addInput(input);
 
             final var deltaPeso = taxaDeAprendizado * termoDeCorrecao * s.getUltimoInputPassado().getValorPuro();
             s.armazenarCorrecao(deltaPeso);

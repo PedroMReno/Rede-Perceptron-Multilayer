@@ -5,7 +5,7 @@ import generico.neuronios.Neuronio;
 public class NeuronioSensorial extends Neuronio {
     @Override
     protected double computarEntradas() {
-        if(inputBuffer.size() != 1) {
+        if(inputBuffer.size() == 0) {
             throw new RuntimeException("Quantidade de entradas inesperada");
         }
 

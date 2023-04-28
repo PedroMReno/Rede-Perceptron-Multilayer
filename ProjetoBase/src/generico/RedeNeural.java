@@ -62,7 +62,7 @@ public class RedeNeural {
             ultimaCamada.addEntrada(erros);
 
             // Backpropagation
-            final var iteCamadas = this.camadas.listIterator();
+            final var iteCamadas = this.camadas.listIterator(this.camadas.size());
             while(iteCamadas.hasPrevious())
                 iteCamadas.previous().backPropagation(taxaDeAprendizado);
 

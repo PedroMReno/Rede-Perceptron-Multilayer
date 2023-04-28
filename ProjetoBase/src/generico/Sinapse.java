@@ -4,20 +4,26 @@ import generico.dto.Input;
 import generico.neuronios.Neuronio;
 
 public class Sinapse {
-    private final Neuronio neuronio;
+    private final Neuronio ini;
+    private final Neuronio fim;
     private double peso;
     private double deltaPeso;
     private Input ultimoInputPassado;
 
-    public Sinapse(final Neuronio neuronio, final double peso) {
-        this.neuronio = neuronio;
+    public Sinapse(final Neuronio ini, final Neuronio fim, final double peso) {
+        this.ini = ini;
+        this.fim = fim;
         this.peso = peso;
         this.deltaPeso = 0;
         this.ultimoInputPassado = null;
     }
 
-    public Neuronio getNeuronio() {
-        return neuronio;
+    public Neuronio getIni() {
+        return ini;
+    }
+
+    public Neuronio getFim() {
+        return fim;
     }
 
     public Input getUltimoInputPassado() {
@@ -34,7 +40,7 @@ public class Sinapse {
     }
 
     public Input gerarInput(final double valor) {
-        this.ultimoInputPassado = new Input(neuronio, peso, valor);
+        this.ultimoInputPassado = new Input(fim, peso, valor);
         return ultimoInputPassado;
     }
 }
