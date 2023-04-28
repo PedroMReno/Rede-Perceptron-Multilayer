@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Retro propagation v1">
-      <change afterPath="$PROJECT_DIR$/src/generico/EntradaDeTeste.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generico/dto/InputTreinamento.java" afterDir="false" />
+    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Retro propagation v2">
+      <change afterPath="$PROJECT_DIR$/src/generico/CamadaNeuralUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/CamadaNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/CamadaNeural.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/dto/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/Neuronio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/Neuronio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/RedeNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/RedeNeural.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/Sinapse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/Sinapse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/percepton/Perceptron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/percepton/Perceptron.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682391727860</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Retro propagation v2">
+      <created>1682641036643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682641036644</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,7 +111,8 @@
     <MESSAGE value="Fix project" />
     <MESSAGE value="Fix gitignore" />
     <MESSAGE value="Retro propagation v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retro propagation v1" />
+    <MESSAGE value="Retro propagation v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Retro propagation v2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
