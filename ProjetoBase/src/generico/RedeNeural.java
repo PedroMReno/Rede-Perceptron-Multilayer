@@ -17,7 +17,7 @@ public class RedeNeural {
         this.camadas = new LinkedList<>();
 
         final List<Neuronio> neuroniosSensoriais = new LinkedList<>();
-        for(int i = 0; i < qtdNeuroniosSensorial; i++) {
+        for (int i = 0; i < qtdNeuroniosSensorial; i++) {
             neuroniosSensoriais.add(new NeuronioSensorial());
         }
 
@@ -34,7 +34,7 @@ public class RedeNeural {
     }
 
     public List<Double> predict(final List<Double> entrada) {
-        if(ultimaCamada == camadaSensorial)
+        if (ultimaCamada == camadaSensorial)
             throw new RuntimeException("Sem camadas discretas");
 
         this.camadaSensorial.addEntrada(entrada);
@@ -44,17 +44,44 @@ public class RedeNeural {
     }
 
     public void fit(final List<InputTreinamento> amostras, final double taxaDeAprendizado, final int epocas) {
-        if(ultimaCamada == camadaSensorial)
+        if (ultimaCamada == camadaSensorial)
             throw new RuntimeException("Sem camadas discretas");
 
-        for(int i = 0; i < epocas; i++)
+        for (int i = 0; i < epocas; i++)
             executarEpoca(amostras, taxaDeAprendizado);
+    }
+
+    public void fit(final List<InputTreinamento> amostras, final List<InputTreinamento> conjuntoDeValidacao,
+                    final double taxaDeAprendizado, final double erroMaximo) {
+        if (ultimaCamada == camadaSensorial)
+            throw new RuntimeException("Sem camadas discretas");
+
+        for (int i = 0; i < 500; i++) {
+            executarEpoca(amostras, taxaDeAprendizado);
+
+            double erroQuadratico = 0.0;
+            for(final InputTreinamento validacao : conjuntoDeValidacao) {
+                final var result = predict(validacao.getInput());
+                final var erros = erroDeFit(validacao.getExpect(), result);
+
+                double erroDaRede = 0.0;
+                for(Double e : erros)
+                    erroDaRede += Math.pow(e, 2);
+
+                erroQuadratico += erroDaRede / 2;
+            }
+
+            erroQuadratico = erroQuadratico / conjuntoDeValidacao.size();
+
+            if(erroQuadratico < erroMaximo)
+                break;
+        }
     }
 
     private double executarEpoca(List<InputTreinamento> amostras, double taxaDeAprendizado) {
         double erroDaEpoca = 0;
 
-        for(final InputTreinamento amostra : amostras) {
+        for (final InputTreinamento amostra : amostras) {
             // FeedForwarding
             final var result = predict(amostra.getInput());
             final var erros = erroDeFit(amostra.getExpect(), result);
@@ -63,14 +90,14 @@ public class RedeNeural {
 
             // Backpropagation
             final var iteCamadas = this.camadas.listIterator(this.camadas.size());
-            while(iteCamadas.hasPrevious())
+            while (iteCamadas.hasPrevious())
                 iteCamadas.previous().backPropagation(taxaDeAprendizado);
 
             // Ajuste de pesos
             this.camadas.forEach(CamadaNeural::aplicarDeltaPesos);
 
             // Calculo de erro
-            for(double erro : erros) {
+            for (double erro : erros) {
                 erroDaEpoca += Math.pow(erro, 2) / 2;
             }
         }
@@ -83,7 +110,7 @@ public class RedeNeural {
 
         final var iteExp = expected.iterator();
         final var iteResul = resultado.iterator();
-        while(iteExp.hasNext()) {
+        while (iteExp.hasNext()) {
             erros.add(iteExp.next() - iteResul.next());
         }
 

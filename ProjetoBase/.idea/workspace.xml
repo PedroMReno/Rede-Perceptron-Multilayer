@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Add bias">
+    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Fix error calculation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generico/RedeNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/RedeNeural.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/Sinapse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/Sinapse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/neuronios/Neuronio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/neuronios/Neuronio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/neuronios/NeuronioSensorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/neuronios/NeuronioSensorial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682644119666</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Big fix v1">
+      <created>1682645738160</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682645738160</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix deltas not being calculated properly">
+      <created>1682905626744</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682905626744</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix error calculation">
+      <created>1682906068059</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682906068059</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,15 +149,38 @@
     <MESSAGE value="Retro propagation v2" />
     <MESSAGE value="Update main" />
     <MESSAGE value="Add bias" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add bias" />
+    <MESSAGE value="Big fix v1" />
+    <MESSAGE value="Fix deltas not being calculated properly" />
+    <MESSAGE value="Fix error calculation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix error calculation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/generico/RedeNeural.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="12" />
+          <line>93</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/generico/neuronios/Neuronio.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/generico/neuronios/Neuronio.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/generico/RedeNeural.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/generico/RedeNeural.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
