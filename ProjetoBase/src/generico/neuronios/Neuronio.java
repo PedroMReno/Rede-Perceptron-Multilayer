@@ -65,11 +65,11 @@ public abstract class Neuronio {
                 derivadaDaFuncaoDeAtivacao(this.ultimoInputFeedforwarding);
 
         for(Sinapse s : sinapsesAnteriores) {
-            final var input = s.gerarInput(termoDeCorrecao);
-            s.getIni().addInput(input);
-
             final var deltaPeso = taxaDeAprendizado * termoDeCorrecao * s.getUltimoInputPassado().getValorPuro();
             s.armazenarCorrecao(deltaPeso);
+
+            final var input = s.gerarInput(termoDeCorrecao);
+            s.getIni().addInput(input);
         }
 
         this.inputBuffer.clear();
