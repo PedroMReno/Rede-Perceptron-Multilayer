@@ -71,7 +71,7 @@ public class RedeNeural {
 
             // Calculo de erro
             for(double erro : erros) {
-                erroDaEpoca += Math.pow(erro, 2);
+                erroDaEpoca += Math.pow(erro, 2) / 2;
             }
         }
 
