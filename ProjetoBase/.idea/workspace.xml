@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Fix error calculation">
+    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Add early stop">
+      <change afterPath="$PROJECT_DIR$/src/generico/utils/ConfusionMatrixUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/RedeNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/RedeNeural.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/CamadaNeuralUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/utils/CamadaNeuralUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682906068059</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add early stop">
+      <created>1682984789558</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682984789558</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,38 +160,24 @@
     <MESSAGE value="Big fix v1" />
     <MESSAGE value="Fix deltas not being calculated properly" />
     <MESSAGE value="Fix error calculation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix error calculation" />
+    <MESSAGE value="Add early stop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add early stop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/generico/RedeNeural.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/generico/neuronios/Neuronio.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/generico/neuronios/Neuronio.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/generico/RedeNeural.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/generico/RedeNeural.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="20" />
+          <line>50</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((Sinapse)((java.util.LinkedList)((NeuronioSensorial)((java.util.LinkedList)((CamadaNeural)((java.util.LinkedList)((RedeNeural)this).camadas).get(0)).neuronios).get(0)).sinapsesSeguintes).get(0)).peso" custom="generico.neuronios.NeuronioSensorial,generico.RedeNeural,generico.CamadaNeural,java.util.LinkedList,generico.Sinapse" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

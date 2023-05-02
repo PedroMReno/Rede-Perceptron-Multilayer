@@ -1,5 +1,6 @@
-package generico;
+package generico.utils;
 
+import generico.CamadaNeural;
 import generico.neuronios.Neuronio;
 import percepton.Perceptron;
 
