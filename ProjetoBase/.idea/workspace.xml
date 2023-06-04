@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Add confusion matrix">
+    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Use sigmoid function">
+      <change afterPath="$PROJECT_DIR$/src/util/DataSplitter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/RedeNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/RedeNeural.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/utils/ConfusionMatrixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/utils/ConfusionMatrixUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/EntradaDeTeste.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/percepton/Perceptron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/percepton/Perceptron.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682988266206</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Use sigmoid function">
+      <created>1683847746408</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683847746408</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,7 +177,8 @@
     <MESSAGE value="Fix error calculation" />
     <MESSAGE value="Add early stop" />
     <MESSAGE value="Add confusion matrix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add confusion matrix" />
+    <MESSAGE value="Use sigmoid function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use sigmoid function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
