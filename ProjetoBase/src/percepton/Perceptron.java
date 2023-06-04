@@ -16,12 +16,13 @@ public class Perceptron extends Neuronio {
 
     @Override
     protected double funcaoDeAtivacao(double entradaComputada) {
-        return 1 / (1 + Math.pow(Math.E, -entradaComputada));
+        final double r = 1 / (1 + Math.pow(Math.E, -entradaComputada));
+        return r * 2 - 1;
     }
 
     @Override
     protected double derivadaDaFuncaoDeAtivacao(double entradaComputada) {
-        final var fx = funcaoDeAtivacao(entradaComputada);
-        return fx * (1 - fx);
+        final var fx = 1 / (1 + Math.pow(Math.E, -entradaComputada));
+        return 2 * fx * (1 - fx);
     }
 }
