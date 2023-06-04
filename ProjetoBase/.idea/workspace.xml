@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Update perceptron function">
+    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Teste com caracteres">
+      <change afterPath="$PROJECT_DIR$/src/MainPortaLogica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoBase/data/caracteres_ruido20.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/caracteres_ruido20.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/RedeNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/RedeNeural.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/dto/InputTreinamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/dto/Amostra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/utils/ConfusionMatrixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/utils/ConfusionMatrixUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/percepton/Perceptron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/percepton/Perceptron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/DataSplitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/DataSplitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainCaracteres.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,18 +41,32 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Pedro\Desktop\Workspace\IA\RedesNeurais\ProjetoBase\src" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="util" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="Application.MainPortaLogica">
+    <configuration name="MainCaracteres" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainCaracteres" />
       <module name="ProjetoBase" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainPortaLogica" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="MainPortaLogica" />
+      <module name="ProjetoBase" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainPortaLogica" />
+      <item itemvalue="Application.MainCaracteres" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainCaracteres" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685889800757</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Teste com caracteres">
+      <created>1685892183528</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685892183528</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,7 +213,8 @@
     <MESSAGE value="Use sigmoid function" />
     <MESSAGE value="Read data from files" />
     <MESSAGE value="Update perceptron function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update perceptron function" />
+    <MESSAGE value="Teste com caracteres" />
+    <option name="LAST_COMMIT_MESSAGE" value="Teste com caracteres" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -209,7 +225,7 @@
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/MainCaracteres.java</url>
           <line>31</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
