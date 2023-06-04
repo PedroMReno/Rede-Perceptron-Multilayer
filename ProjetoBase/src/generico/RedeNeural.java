@@ -1,6 +1,6 @@
 package generico;
 
-import generico.dto.InputTreinamento;
+import generico.dto.Amostra;
 import generico.neuronios.Neuronio;
 import generico.neuronios.NeuronioSensorial;
 
@@ -43,7 +43,7 @@ public class RedeNeural {
         return ultimaCamada.getOutput();
     }
 
-    public void fit(final List<InputTreinamento> amostras, final double taxaDeAprendizado, final int epocas) {
+    public void fit(final List<Amostra> amostras, final double taxaDeAprendizado, final int epocas) {
         if (ultimaCamada == camadaSensorial)
             throw new RuntimeException("Sem camadas discretas");
 
@@ -51,7 +51,7 @@ public class RedeNeural {
             executarEpoca(amostras, taxaDeAprendizado);
     }
 
-    public void fit(final List<InputTreinamento> amostras, final List<InputTreinamento> conjuntoDeValidacao,
+    public void fit(final List<Amostra> amostras, final List<Amostra> conjuntoDeValidacao,
                     final double taxaDeAprendizado, final double erroMaximo) {
         if (ultimaCamada == camadaSensorial)
             throw new RuntimeException("Sem camadas discretas");
@@ -60,7 +60,7 @@ public class RedeNeural {
             executarEpoca(amostras, taxaDeAprendizado);
 
             double erroQuadratico = 0.0;
-            for(final InputTreinamento validacao : conjuntoDeValidacao) {
+            for(final Amostra validacao : conjuntoDeValidacao) {
                 final var result = predict(validacao.getInput());
                 final var erros = erroDeFit(validacao.getExpect(), result);
 
@@ -78,10 +78,10 @@ public class RedeNeural {
         }
     }
 
-    private double executarEpoca(List<InputTreinamento> amostras, double taxaDeAprendizado) {
+    private double executarEpoca(List<Amostra> amostras, double taxaDeAprendizado) {
         double erroDaEpoca = 0;
 
-        for (final InputTreinamento amostra : amostras) {
+        for (final Amostra amostra : amostras) {
             // FeedForwarding
             final var result = predict(amostra.getInput());
             final var erros = erroDeFit(amostra.getExpect(), result);

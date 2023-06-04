@@ -1,7 +1,5 @@
 package generico.utils;
 
-import generico.dto.InputTreinamento;
-
 import java.util.List;
 
 public class ConfusionMatrixUtils {

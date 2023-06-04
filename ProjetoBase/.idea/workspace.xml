@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Use sigmoid function">
-      <change afterPath="$PROJECT_DIR$/src/util/DataSplitter.java" afterDir="false" />
+    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Update perceptron function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoBase/data/caracteres_ruido20.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/EntradaDeTeste.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/caracteres_ruido20.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/RedeNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/RedeNeural.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/dto/InputTreinamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/dto/Amostra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/utils/ConfusionMatrixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/utils/ConfusionMatrixUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/percepton/Perceptron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/percepton/Perceptron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/DataSplitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/DataSplitter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683847746408</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Read data from files">
+      <created>1685889786536</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685889786536</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update perceptron function">
+      <created>1685889800757</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685889800757</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,7 +196,9 @@
     <MESSAGE value="Add early stop" />
     <MESSAGE value="Add confusion matrix" />
     <MESSAGE value="Use sigmoid function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use sigmoid function" />
+    <MESSAGE value="Read data from files" />
+    <MESSAGE value="Update perceptron function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update perceptron function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -187,6 +207,11 @@
           <url>file://$PROJECT_DIR$/src/generico/RedeNeural.java</url>
           <line>50</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

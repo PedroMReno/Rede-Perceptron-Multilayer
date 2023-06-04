@@ -1,6 +1,6 @@
 package util;
 
-import generico.dto.InputTreinamento;
+import generico.dto.Amostra;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DataSplitter {
-    public static List<InputTreinamento> splitData(final String dataPath, final int entrySize) {
-        final List<InputTreinamento> result = new LinkedList<>();
+    public static List<Amostra> splitData(final String dataPath, final int entrySize) {
+        final List<Amostra> result = new LinkedList<>();
         final Scanner sc;
 
         try {
@@ -31,7 +31,7 @@ public class DataSplitter {
             for(int i = entrySize; i < arr.length; i++)
                     expected.add(Double.parseDouble(arr[i]));
 
-            result.add(new InputTreinamento(entry, expected));
+            result.add(new Amostra(entry, expected));
         }
         sc.close();
 
