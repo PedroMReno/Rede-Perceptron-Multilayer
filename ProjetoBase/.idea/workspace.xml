@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Teste com caracteres">
-      <change afterPath="$PROJECT_DIR$/src/MainPortaLogica.java" afterDir="false" />
+    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Split main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainCaracteres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainCaracteres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainCaracteres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainPortaLogica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPortaLogica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/RedeNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/RedeNeural.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/dto/Amostra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/dto/Amostra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/utils/CamadaNeuralUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/CamadaNeuralUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/utils/ConfusionMatrixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/ConfusionMatrixUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +49,7 @@
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainPortaLogica">
+  <component name="RunManager" selected="Application.MainCaracteres">
     <configuration name="MainCaracteres" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainCaracteres" />
       <module name="ProjetoBase" />
@@ -184,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685892183528</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Split main">
+      <created>1685892787369</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685892787369</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,7 +225,8 @@
     <MESSAGE value="Read data from files" />
     <MESSAGE value="Update perceptron function" />
     <MESSAGE value="Teste com caracteres" />
-    <option name="LAST_COMMIT_MESSAGE" value="Teste com caracteres" />
+    <MESSAGE value="Split main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Split main" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -226,8 +238,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MainCaracteres.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="27" />
+          <line>25</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

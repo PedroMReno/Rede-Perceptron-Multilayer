@@ -1,4 +1,4 @@
-package generico.utils;
+package util;
 
 import generico.CamadaNeural;
 import generico.neuronios.Neuronio;

@@ -1,8 +1,11 @@
-import generico.utils.CamadaNeuralUtils;
+import util.CamadaNeuralUtils;
 import generico.RedeNeural;
 import generico.dto.Amostra;
+import util.ConfusionMatrixUtils;
 import util.DataSplitter;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class MainCaracteres {
@@ -15,12 +18,38 @@ public class MainCaracteres {
         rede.addCamada(CamadaNeuralUtils.camadaDePerceptrons(15, true));
         rede.addCamada(CamadaNeuralUtils.camadaDePerceptrons(7, true)); // saida
 
-        rede.fit(dataTrei, dataValid, 0.005, 0.1);
+        rede.fit(dataTrei, dataValid, 0.005, 0.01);
 
         final var inputs = dataTest.stream().map(Amostra::getInput).collect(Collectors.toList());
-        for(int i = 0; i < 7; i++) {
-            final var r = rede.predict(inputs.get(i));
+        final var expected = dataTest.stream().map(amos -> getHigherIndex(amos.getExpected()))
+                .collect(Collectors.toList());
+        final List<Integer> results = new LinkedList<>();
+
+        for (List<Double> input : inputs) {
+            final var r = rede.predict(input);
+            results.add(getHigherIndex(r));
+
             System.out.println(r);
         }
+
+        System.out.println();
+
+        ConfusionMatrixUtils.confusionMatrixForMultiClass(results, expected, 7);
+    }
+
+    private static int getHigherIndex(final List<Double> list) {
+        double higher = -999;
+        int r = 0; // resposta
+
+        for(int i = 0; i < list.size(); i++) {
+            final double value = list.get(i);
+
+            if (higher < value) {
+                higher = value;
+                r = i;
+            }
+        }
+
+        return r;
     }
 }

@@ -15,7 +15,7 @@ public class Amostra {
         return input;
     }
 
-    public List<Double> getExpect() {
+    public List<Double> getExpected() {
         return expect;
     }
 }

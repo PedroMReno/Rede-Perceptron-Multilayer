@@ -62,7 +62,7 @@ public class RedeNeural {
             double erroQuadratico = 0.0;
             for(final Amostra validacao : conjuntoDeValidacao) {
                 final var result = predict(validacao.getInput());
-                final var erros = erroDeFit(validacao.getExpect(), result);
+                final var erros = erroDeFit(validacao.getExpected(), result);
 
                 double erroDaRede = 0.0;
                 for(Double e : erros)
@@ -84,7 +84,7 @@ public class RedeNeural {
         for (final Amostra amostra : amostras) {
             // FeedForwarding
             final var result = predict(amostra.getInput());
-            final var erros = erroDeFit(amostra.getExpect(), result);
+            final var erros = erroDeFit(amostra.getExpected(), result);
 
             ultimaCamada.addEntrada(erros);
 
