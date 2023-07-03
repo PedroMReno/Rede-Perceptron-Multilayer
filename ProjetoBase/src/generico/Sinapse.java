@@ -43,4 +43,8 @@ public class Sinapse {
         this.ultimoInputPassado = new Input(fim, peso, valor);
         return ultimoInputPassado;
     }
+
+    public double getPeso() {
+        return peso;
+    }
 }

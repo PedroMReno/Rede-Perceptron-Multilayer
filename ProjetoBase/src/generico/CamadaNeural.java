@@ -50,11 +50,12 @@ public class CamadaNeural {
     }
 
     public void addEntrada(final List<Double> entrada) {
+        // Adicionando cada entrada para o buffer de cada neuronio sensorial apropriado
         if(entrada.size() != neuronios.size())
             throw new RuntimeException("Tamanho de entrada invalido");
 
         final var iterNeu = neuronios.iterator();
-        for (Double e : entrada) {
+        for (final Double e : entrada) {
             iterNeu.next().addInput(new Input(e));
         }
     }
@@ -69,5 +70,9 @@ public class CamadaNeural {
 
     public void aplicarDeltaPesos() {
         this.neuronios.forEach(Neuronio::aplicarDeltaPesos);
+    }
+
+    public List<List<Double>> auxMostraPeso() {
+        return this.neuronios.stream().map(Neuronio::auxMostraPesos).collect(Collectors.toList());
     }
 }

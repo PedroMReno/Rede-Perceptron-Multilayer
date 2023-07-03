@@ -7,6 +7,7 @@ import generico.neuronios.NeuronioSensorial;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class RedeNeural {
     private final List<CamadaNeural> camadas;
@@ -59,6 +60,7 @@ public class RedeNeural {
         for (int i = 0; i < 500; i++) {
             executarEpoca(amostras, taxaDeAprendizado);
 
+            // Testando validacao
             double erroQuadratico = 0.0;
             for(final Amostra validacao : conjuntoDeValidacao) {
                 final var result = predict(validacao.getInput());
@@ -78,9 +80,7 @@ public class RedeNeural {
         }
     }
 
-    private double executarEpoca(List<Amostra> amostras, double taxaDeAprendizado) {
-        double erroDaEpoca = 0;
-
+    private void executarEpoca(List<Amostra> amostras, double taxaDeAprendizado) {
         for (final Amostra amostra : amostras) {
             // FeedForwarding
             final var result = predict(amostra.getInput());
@@ -95,14 +95,7 @@ public class RedeNeural {
 
             // Ajuste de pesos
             this.camadas.forEach(CamadaNeural::aplicarDeltaPesos);
-
-            // Calculo de erro
-            for (double erro : erros) {
-                erroDaEpoca += Math.pow(erro, 2) / 2;
-            }
         }
-
-        return erroDaEpoca / amostras.size();
     }
 
     private List<Double> erroDeFit(final List<Double> expected, final List<Double> resultado) {
@@ -115,5 +108,9 @@ public class RedeNeural {
         }
 
         return erros;
+    }
+
+    private List<List<List<Double>>> auxMostraPeso() {
+        return this.camadas.stream().map(CamadaNeural::auxMostraPeso).collect(Collectors.toList());
     }
 }

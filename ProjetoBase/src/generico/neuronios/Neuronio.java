@@ -5,6 +5,7 @@ import generico.dto.Input;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class Neuronio {
     protected List<Sinapse> sinapsesSeguintes;
@@ -77,5 +78,9 @@ public abstract class Neuronio {
 
     public void aplicarDeltaPesos() {
         this.sinapsesAnteriores.forEach(Sinapse::aplicarCorrecao);
+    }
+
+    public List<Double> auxMostraPesos() {
+        return sinapsesSeguintes.stream().map(Sinapse::getPeso).collect(Collectors.toList());
     }
 }

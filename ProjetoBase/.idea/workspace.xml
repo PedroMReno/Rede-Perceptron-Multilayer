@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Split main">
+    <list default="true" id="cefd1aa1-351e-4b84-95c1-8e3cd50d94fa" name="Changes" comment="Remove unused">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainCaracteres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainCaracteres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainPortaLogica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPortaLogica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/CamadaNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/CamadaNeural.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generico/RedeNeural.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/RedeNeural.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/dto/Amostra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/dto/Amostra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/utils/CamadaNeuralUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/CamadaNeuralUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generico/utils/ConfusionMatrixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/ConfusionMatrixUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/Sinapse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/Sinapse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generico/neuronios/Neuronio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generico/neuronios/Neuronio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685892787369</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Confusion matrix multiclass">
+      <created>1687578474161</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1687578474161</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,26 +231,23 @@
     <MESSAGE value="Update perceptron function" />
     <MESSAGE value="Teste com caracteres" />
     <MESSAGE value="Split main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Split main" />
+    <MESSAGE value="Confusion matrix multiclass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Confusion matrix multiclass" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/generico/RedeNeural.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MainCaracteres.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="29" />
+          <line>22</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="((Sinapse)((java.util.LinkedList)((NeuronioSensorial)((java.util.LinkedList)((CamadaNeural)((java.util.LinkedList)((RedeNeural)this).camadas).get(0)).neuronios).get(0)).sinapsesSeguintes).get(0)).peso" custom="generico.neuronios.NeuronioSensorial,generico.RedeNeural,generico.CamadaNeural,java.util.LinkedList,generico.Sinapse" />
+        <watch expression="this.auxMostraPeso()" language="JAVA" />
+        <watch expression="this.auxMostraPeso().get(0).get(0)" />
       </configuration>
     </watches-manager>
   </component>
